@@ -1,10 +1,12 @@
 #topMenu {
+
     background-color: #D0D0D0;
     text-shadow: 0 1px #FFFFFF;
     box-shadow: 0 1px #000000;
 }
 
 #topMenuTxt {
+
 	margin-top: 4em;
     margin-left: 4em;   
 }
