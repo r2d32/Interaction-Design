@@ -8,9 +8,20 @@
     </head>
     
     <body>
-      <div class="row" id = "topMenu"> 
-        <img src="switch.png" class="img-rounded">
-        <div class="span1" id = "topMenuTxt">General</div>
+      <div class="row" id = "topMenu">
+        <!-- JD: Structurally, the icons are part of each toolbar button.  So,
+                 element should be inside the divs (I've done this for you for
+                 this one; hope the reasoning makes sense to you). -->
+        <div class="span1" id = "topMenuTxt">
+            <!-- JD: Now, the trick is: how do you make the img and the text
+                     display properly?  I leave this for you to work out. -->
+            <img src="switch.png" class="img-rounded">
+            General
+        </div>
+        <!-- JD: The id attribute is exactly that: an id or identifier.  Thus,
+                 *only one* element may have any given id.  I suspect what you
+                 really mean here is a class.  Just add "topMenuTxt" to the
+                 class attribute then: class="span1 topMenuTxt" -->
         <div class="span1" id = "topMenuTxt">Labels</div>
         <div class="span1" id = "topMenuTxt">Sidebar</div>
         <div class="span1" id = "topMenuTxt">Advanced</div>
