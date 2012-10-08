@@ -8,40 +8,49 @@
     </head>
     
     <body>
-      <div class="row" id = "topMenu"> 
-        <img src="switch.png" class="img-rounded">
-        <div class="span1" id = "topMenuTxt">General</div>
-        <div class="span1" id = "topMenuTxt">Labels</div>
-        <div class="span1" id = "topMenuTxt">Sidebar</div>
-        <div class="span1" id = "topMenuTxt">Advanced</div>
-      </div>
-      <div class="row">
-        <div class="row offset1">
-    	  <label class="checkbox">
-            <input type="checkbox">Show all filename extensions
-          </label>
+      <div class="row" id = "topMenu">
+        <div class="span1_topMenuTxt">
+          <img src="switch.png" class="img-rounded_General" >General
         </div>
-        <div class="row offset1">
-    	  <label class="checkbox">
-            <input type="checkbox">Show warning before changing an extension
-          </label>
+        <div class="span1_topMenuTxt">
+          <img src="labels.png" class="img-rounded_Labels" >Labels
         </div>
-        <div class="row offset1">
-    	  <label class="checkbox">
-            <input type="checkbox">Show warning before emptying the Trash
-          </label>
+        <div class="span1_topMenuTxt">
+          <img src="sidebar.png" class="img-rounded_Sidebar" >Sidebar
         </div>
-        <div class="row offset1">
-    	  <label class="checkbox">
-            <input type="checkbox">Empty Trash securely
-          </label>
+        <div class="span1_topMenuTxt">
+          <img src="advanced.png" class="img-rounded_Advanced" >Advanced
         </div>
       </div>
-      <p>When performing a search</p>
-      <select>
-        <option>Search This Mac</option>
-        <option>Search the Current Folder</option>
-        <option>Use the Previous Search Scope</option>
-      </select>
+      <div class="row_lower">
+        <div class="row1" id = "bottomMenu">
+          <div class="row2">
+    	    <label class="checkbox">
+              <input type="checkbox">Show all filename extensions
+            </label>
+          </div>
+          <div class="row2">
+    	    <label class="checkbox">
+              <input type="checkbox">Show warning before changing an extension
+            </label>
+          </div>
+          <div class="row2">
+    	    <label class="checkbox">
+              <input type="checkbox">Show warning before emptying the Trash
+            </label>
+          </div>
+          <div class="row2">
+    	    <label class="checkbox">
+              <input type="checkbox">Empty Trash securely
+            </label>
+          </div>
+        </div>
+        <p id = "when" >When performing a search:</p>
+        <select id = "dropDown">
+          <option>Search This Mac</option>
+          <option>Search the Current Folder</option>
+          <option>Use the Previous Search Scope</option>
+        </select>
+      </div>
     </body>
 </html>
