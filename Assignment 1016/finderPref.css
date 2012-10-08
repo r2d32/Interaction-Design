@@ -4,9 +4,8 @@
     text-shadow: 0 1px #FFFFFF;
     box-shadow: 0 1px #000000;
 }
+.span1_topMenuTxt {
 
-#topMenuTxt {
-
-	margin-top: 4em;
-    margin-left: 4em;   
+    margin-top: 3em;
+    margin-left: 2em;   
 }
