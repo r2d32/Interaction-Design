@@ -1,15 +1,28 @@
 <!doctype html>
 <html>
     <head>
-        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/css/bootstrap-combined.min.css">
-        <link rel="stylesheet" href="finderPref.css">
-        <meta charset="UTF-8" />
-        <title>Finder Preferences</title>
+      <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+      <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/css/bootstrap-combined.min.css">
+      <link rel="stylesheet" href="finderPref.css">
+      <link rel="stylesheet" href="finderPref.js">
+      <script src="http://code.jquery.com/jquery.min.js"></script>
+      <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/js/bootstrap.min.js"></script>
+      <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+      <meta charset="UTF-8" />
+      <!--Trigger slider-->
+      <script>
+      $(function() {
+        $( "#slider" ).slider();
+      });
+      </script>
+      
+      <title>Finder Preferences</title>
     </head>
     
     <body>
       <div class="row" id = "topMenu">
-        <div class="span1_topMenuTxt">
+        <div class="span1_topMenuTxt" id = "General">
           <img src="switch.png" class="img-rounded_General" >
             <div>General</div>
         </div>
@@ -26,35 +39,52 @@
             <div>Advanced</div>
         </div>
       </div>
+      <p>Show these items on the desktop:</p>
       <div class="row_lower">
         <div class="row1" id = "bottomMenu">
           <div class="row2">
     	    <label class="checkbox">
-              <input type="checkbox">Show all filename extensions
+              <input type="checkbox">Hard disks
             </label>
           </div>
           <div class="row2">
     	    <label class="checkbox">
-              <input type="checkbox">Show warning before changing an extension
+              <input type="checkbox">External disks
             </label>
           </div>
           <div class="row2">
     	    <label class="checkbox">
-              <input type="checkbox">Show warning before emptying the Trash
+              <input type="checkbox">CDs, DVDs, and iPods
             </label>
           </div>
           <div class="row2">
     	    <label class="checkbox">
-              <input type="checkbox">Empty Trash securely
+              <input type="checkbox">Connected servers
             </label>
           </div>
         </div>
-        <p id = "when" >When performing a search:</p>
-        <select id = "dropDown">
-          <option>Search This Mac</option>
-          <option>Search the Current Folder</option>
-          <option>Use the Previous Search Scope</option>
-        </select>
+        <p>New Finder windows open:</p>
+        <div class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown trigger</a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+        <li><a tabindex="-1" href="#">Action</a></li>
+        <li><a tabindex="-1" href="#">Another action</a></li>
+        <li><a tabindex="-1" href="#">Something else here</a></li>
+        <li class="divider"></li>
+        <li><a tabindex="-1" href="#">Separated link</a></li>
+        </ul>
+        </div>
+        <p class="row2">
+          <label class="checkbox">
+           <input type="checkbox">Always open folders in a new window
+          </label>
+        </p>
+        <div id="slider"></div>
+        <p class="row2">
+          <label class="checkbox">
+           <input type="checkbox">Spring-loaded folders and windows
+          </label>
+        </p>
       </div>
     </body>
 </html>
