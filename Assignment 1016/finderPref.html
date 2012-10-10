@@ -13,7 +13,13 @@
       <!--Trigger slider-->
       <script>
       $(function() {
-        $( "#slider" ).slider();
+        $( "#slider" ).slider({
+            value:100,
+            min: 0,
+            max: 6,
+            step: 1,
+            value: 3,
+        });
       });
       </script>
       
@@ -74,16 +80,26 @@
         <li><a tabindex="-1" href="#">Separated link</a></li>
         </ul>
         </div>
-        <p class="row2">
-          <label class="checkbox">
-           <input type="checkbox">Always open folders in a new window
-          </label>
-        </p>
-        <div id="slider"></div>
-        <p class="row2">
-          <label class="checkbox">
-           <input type="checkbox">Spring-loaded folders and windows
-          </label>
+        <label class="checkbox">
+          <p><input type="checkbox">Always open folders in a new window</p>
+          <p><input type="checkbox">Spring-loaded folders and windows</p>
+        </label>
+           
+          <div class="row" id = "sliderRow"> 
+            <div class="span4" id ="sT">Delay:</div>
+            <div class="span4">
+              <div id="slider"></div>
+            </div>
+          </div>
+          <div class="row" > 
+            <div class="span4" id= "mark1" >|</div>
+            <div class="span4" id ="marks">|</div>
+            <div class="span4" id ="marks">|</div>
+            <div class="span4" id ="marks">|</div>
+            <div class="span4" id ="marks">|</div>
+            <div class="span4" id ="marks">|</div>
+            <div class="span4" id ="marks">|</div>
+          </div>
         </p>
       </div>
     </body>

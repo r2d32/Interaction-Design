@@ -6,16 +6,14 @@ body{
 #topMenu {
 
     background: -webkit-gradient(linear, left top, left bottom, from(#C8C8C8), to(#A8A8A8));
-    text-shadow: 0 1px #FFFFFF;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.53);
     box-shadow: 0 1px #000000;
 }
 
 .span1_topMenuTxt {
-    
     text-align: center;
 	margin-top: 1em;
     margin-left: 1em;   
-
 }
 #General{
 	margin-left: 3em; 
@@ -23,7 +21,6 @@ body{
 #bottomMenu {
    margin-top: 0.5em;
    margin-left: 5em; 
-   
 }
 p{
    margin-top: 1.5em;
@@ -32,3 +29,31 @@ p{
 .dropdown{
    margin-left: 5em; 
 }
+#sT{
+	margin-left: 6.25em;
+	margin-top: -0.65em;
+	width: 34px;
+}
+.ui-slider-horizontal {
+	height: .2em;
+	background: -webkit-gradient(linear, left top, left bottom, from(#6B6A6A), to(#CCCBCB));	
+	width: 11.5em;
+
+}
+#slider > a {
+	border-color: #5F5D5D;
+	left: 50%;
+	height: 13px;
+	width: 12px;
+}
+#mark1{
+	width: 9px;
+    margin-left: 28.5em;
+    font-size: 5px
+
+}
+#marks{
+	width: 9px;
+	font-size: 5px
+}
+
