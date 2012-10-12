@@ -59,22 +59,25 @@ p{
 #dropDownBtn{
 	width: 191.5px;
 	height: 11px;
+	margin-left: 4.5em;
 	border-color: #7E7E7E;
 	background-image: -webkit-linear-gradient(bottom, #F7F7F7 20%, #E0E0E0 60%, #F1F1F1 81%, #F7F7F7 100%);
 
 }
 #btnTxt{
-	margin-top: -5px;
-	text-align: left;
-		margin-left: 35px;
+	
+	display: inline-block;
+
 
 }
 #upDown{
-	margin-top: -41px;
-	margin-left: 206px;
+	
+	display: inline-block;
+
 }
 #home{
-	margin-left: -175px;
-	margin-top: -82px;
+
+	display: inline-block;
+
 
 }
