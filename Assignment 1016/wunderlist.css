@@ -115,8 +115,7 @@
 }
 #lowerMenu{
 	height: 34px;
-	background: -webkit-gradient(linear, left top, left bottom, from(#3F3F3F), to(black));
-	border-bottom: outset 1px black;
+background: -webkit-gradient(linear, left top, left bottom, from(#2C2C2C), to(black));	border-bottom: outset 1px black;
 	border-top: outset 1px rgba(82, 82, 82, 0.86);
 	width: 228px;
 	position: fixed;
@@ -159,4 +158,22 @@
 	font: 10px "Helvetica Neue",Arial,Helvetica,sans-serif;
 	font-weight: 500;
 	color: #706F6F;
+}
+#lowerBtn{
+height: 35px;
+width: 43px;
+margin-left: 2px;
+}
+#lowerPic{
+max-width: 52%;
+margin-left: 12px;
+	
+}
+#lowerTxt{
+	font: 8px "Helvetica Neue",Arial,Helvetica,sans-serif;
+	color: white;
+	text-align: center;
+	width: 43px;
+	margin-left: 2px;
+}
 }
