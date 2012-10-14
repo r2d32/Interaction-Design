@@ -3,7 +3,7 @@
     background-size: cover;
     height: 401px;
     width: 228px;
-    overflow:auto;
+    overflow: auto;
 	-webkit-box-shadow: 4px 4px 4px rgba(5, 5, 5, 0.64);
 	margin-left: 12px;
 }
@@ -90,4 +90,19 @@
 	font-weight: 700;
 	margin-top: 9px;
 	margin-left: -30px;
+}
+.tabTxt{
+	display: inline-block;
+	font-weight: 700;
+	margin-top: 8px;
+	margin-left: 8px;
+}
+#lowerMenu{
+	height: 34px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#3F3F3F), to(black));
+	border-bottom: outset 1px black;
+	border-top: outset 1px rgba(82, 82, 82, 0.86);
+	width: 228px;
+	position: fixed;
+	top: 366px;
 }
