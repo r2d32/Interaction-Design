@@ -3,62 +3,36 @@ body{
 	background: #F0F0F0; 	
 }
 
-#topMenu {
+.topMenu {
 
     background: -webkit-gradient(linear, left top, left bottom, from(#C8C8C8), to(#A8A8A8));
     text-shadow: 0 1px rgba(255, 255, 255, 0.53);
     box-shadow: 0 1px #000000;
+    display:block;
 }
 
-.span1_topMenuTxt {
+.topMenuTxt {
     text-align: center;
 	margin-top: 1em;
     margin-left: 1em;   
+    display: inline-block;
 }
+
 #General{
 	margin-left: 3em; 
 }
-#bottomMenu {
+
+.bottomMenu {
    margin-top: 0.5em;
    margin-left: 5em; 
 }
+
 p{
    margin-top: 1.5em;
    margin-left: 3.5em; 
 }
-.dropdown{
-   margin-left: 5em; 
-}
-#sT{
-	margin-left: 1px;
-	margin-top: -6px;
-	width: 42px;
-}
-.ui-slider-horizontal {
-	height: .2em;
-	background: -webkit-gradient(linear, left top, left bottom, from(#6B6A6A), to(#CCCBCB));	
-	width: 11.5em;
 
-}
-#slider > a {
-	
-	border-color: #5F5D5D;
-	left: 50%;
-	height: 13px;
-	width: 12px;
-	
-}
-#mark1{
-	width: 9px;
-    margin-left: 0px;
-    font-size: 5px
-
-}
-#marks{
-	width: 9px;
-	font-size: 5px
-}
-#dropDownBtn{
+.dropDownBtn{
 	-moz-box-shadow:  1px 1px 1px rgba(34, 33, 33, 0.55);
 	-webkit-box-shadow:  1px 1px 1px rgba(34, 33, 33, 0.55);
 	box-shadow: 1px 1px 1px rgba(34, 33, 33, 0.55);
@@ -68,50 +42,120 @@ p{
 	border: 1px solid rgba(71, 71, 71, 0.68);
 	background-image: -webkit-linear-gradient(bottom, #F7F7F7 20%, #E0E0E0 60%, #F1F1F1 81%, #F7F7F7 100%);
 	border-radius: 4px;
-	margin-left: 0%;
-	margin-top: -1%;
-
-
 }
-#btnTxt{
+
+#home{	
+	display: inline-block;
+	float: left;
+	margin-left: 6px;
+	margin-top: -2px;
+}
+
+#upDown{
+	display: inline-block;
+	float: right;
+}
+
+.btnTxt{
 	font-family: "Lucida Grande",Sans,Serif;
 	font-size: 12px;
 	display: inline-block;
+	margin-left: 2px;
 
 }
-#upDown{
+
+.dropdown{
+   margin-left: 5em; 
+}
+
+.sliderRow{
+	margin-left: 67px;
+	margin-top: -7px;
+
+}
+
+.sliderText{
+	margin-left: 1px;
+	margin-top: -6px;
+	width: 42px;
+	display: inline-block;
+}
+
+.ui-slider-horizontal {
+	height: .2em;
+	background: -webkit-gradient(linear, left top, left bottom, from(#6B6A6A), to(#CCCBCB));	
+	width: 11.5em;
+
+}
+
+#slider > a {
+	border-color: #5F5D5D;
+	left: 50%;
+	height: 13px;
+	width: 12px;
 	
-display: inline-block;
 }
-#home{
-display: inline-block;
 
+#slider{
+	display: inline-block;
 }
-#sliderDiv{
+
+.sliderMarks{
 margin-left: 7px;
 margin-top: 2px;
 
 width: 180px;
 }
-#sliderRow{
-	margin-left: 67px;
-}
-#markDiv{
-	width: 190px;
+
+.marksDiv{
+	width: 219px;
 	height: 10px;
-	margin-top: 12px;
-	margin-left: -179px;
+	margin-left: 115px;
 }
+
+.marksDiv > div {
+	display: inline-block;
+	width: 25px;
+	font-size: 6px;
+}
+
+#mark1{
+	width: 9px;
+    margin-left: 0px;
+    font-size: 5px
+
+}
+
+#marks{
+	width: 9px;
+	font-size: 5px
+}
+
 #slider{
 	width: 180px;
 }
-#size{
-	margin-top: 24px;
+
+.size{
+	margin-top: 9px;
 	width: 273px;
-	margin-left: 5%;
+	margin-left: 102px;
 }
-#txt{
+
+.size > div{
+	display: inline-block;
+}
+
+.txt{
 	font-family: "Lucida Grande",Sans,Serif;
 	font-size: 11px;
 	margin-left: 1%;
+}
+
+#medium{
+	margin-left: 17%;
+}
+
+#lastTxt{
+	margin-left: 67px;
+	margin-top: -4px;
 }
