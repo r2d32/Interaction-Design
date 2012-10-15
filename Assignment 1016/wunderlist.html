@@ -13,112 +13,100 @@
   </head>
   <body>
     <div class="frame">
-      <div class="row1" id="topMenu">
-        <div class="span1" id = "topBtn">
-          <div><img src="refresh.png "id="refresh"></div>
+      <div class="topMenu">
+        <div class="topBtn" id="refreshBtn">
+          <div><img src="refresh.png "class="refresh"></div>
         </div>
-        <div class="span">Lists</div>
-        <div class="span1" id = "topBtn">
-          <div><img src="pencil.png "id="refresh"></div>
+        <div class="topBtn"id="pencilBtn">
+          <div><img src="pencil.png "class="refresh"></div>
         </div>
+        <div class="topTxt">Lists</div>
       </div>
-      <div class="row1" id="lowerMenu">
-        <div class="span1" id = "lowerBtn">
-          <div><img src="lists.png "id="lowerPic"></div>
-          <div class = "span1" id="lowerTxt">Lists</div>
+      <div class="lowerMenu">
+        <div class="lowerBtn">
+          <div><img src="lists.png "class="lowerPic"></div>
+          <div class = "lowerTxt">Lists</div>
         </div>
-        <div class="span1" id = "lowerBtn">
-          <div><img src="starred.png "id="lowerPic"></div>
-          <div class = "span1" id="lowerTxt">Starred</div>
+        <div class="lowerBtn">
+          <div><img src="starred.png "class="lowerPic"></div>
+          <div class = "lowerTxt">Starred</div>
         </div>
-        <div class="span1" id = "lowerBtn">
-          <div><img src="today.png "id="lowerPic"></div>
-          <div class = "span1" id="lowerTxt">Today</div>
+        <div class="lowerBtn">
+          <div><img src="today.png "class="lowerPic"></div>
+          <div class = "lowerTxt">Today</div>
         </div>
-        <div class="span1" id = "lowerBtn">
-          <div><img src="overdue.png "id="lowerPic"></div>
-          <div class = "span1" id="lowerTxt">Overdue</div>
+        <div class="lowerBtn">
+          <div><img src="overdue.png "class="lowerPic"></div>
+          <div class = "lowerTxt">Overdue</div>
         </div>
-        <div class="span1" id = "lowerBtn">
-          <div><img src="more.png "id="lowerPic"></div>
-          <div class = "span1" id="lowerTxt">More</div>
+        <div class="lowerBtn">
+          <div><img src="more.png "class="lowerPic"></div>
+          <div class = "lowerTxt">More</div>
         </div>
       </div>
       <div class = "createList"><input type="text" data-provide="typeahead" id="createTxt" value= "Add a new list"></div>
       <div class = "listField">
-        <div class = "row1" id="listTab">
-          <div class = "span1" id ="inboxC" >
+        <div class = "listTab">
+          <div class = "inboxC" >
             <img src="inbox.png "id="inbox"></img>
           </div>
-          <div class = "span1" id="inboxTxt">Inbox</div>
-          <div class = "span1" id ="roundCounter">
+          <div class = "roundCounter pull-right">
             <div class = "counterTxt">0</div>
           </div>
+          <div class = "tabTxt" id = "inboxTxt">Inbox</div>
         </div>
-        <div class ="row1" id="listTab">
+        <div class ="listTab">
           <div class = "tabTxt">Daily Goals</div>
-          <div class = "span1" id ="roundCounter2">
+          <div class = "roundCounter">
             <div class = "counterTxt">2</div>
           </div>
         </div>
-        <div class ="row1" id="listTab">
-          <div class = "tabTxt">Weakly Goals</div>
-          <div class = "span1" id ="roundCounter2">
+        <div class ="listTab">
+          <div class = "tabTxt">Week Goals</div>
+          <div class = "roundCounter">
+            <div class = "counterTxt">12</div>
+          </div>
+        </div>
+        <div class ="listTab">
+          <div class = "tabTxt">To do List</div>
+          <div class = "roundCounter">
             <div class = "counterTxt">9</div>
           </div>
         </div>
-        <div class ="row1" id="listTab">
-          <div class = "tabTxt">To do List</div>
-          <div class = "span1" id ="roundCounter2">
-            <div class = "counterTxt">8</div>
-          </div>
-        </div>
-        <div class ="row1" id="listTab">
-          <div class = "tabTxt">Projects</div>
-          <div class = "span1" id ="roundCounter2">
-            <div class = "counterTxt">2</div>
-          </div>
-        </div>
-        <div class ="row1" id="listTab">
-          <div class = "tabTxt">Meetings</div>
-          <div class = "span1" id ="roundCounter2">
-            <div class = "counterTxt">7</div>
-          </div>
-        </div>
-        <div class ="row1" id="listTab">
+        <div class ="listTab">
           <div class = "tabTxt">Events</div>
-          <div class = "span1" id ="roundCounter2">
+          <div class = "roundCounter">
             <div class = "counterTxt">6</div>
           </div>
         </div>
-        <div class ="row1" id="listTab">
-          <div class = "tabTxt">Ideas</div>
-          <div class = "span1" id ="roundCounter2">
-            <div class = "counterTxt">8</div>
+        <div class ="listTab">
+          <div class = "tabTxt">Meetings</div>
+          <div class = "roundCounter">
+            <div class = "counterTxt">5</div>
           </div>
         </div>
-        <div class ="row1" id="listTab">
-          <div class = "tabTxt">More</div>
-          <div class = "span1" id ="roundCounter2">
+        <div class ="listTab">
+          <div class = "tabTxt">Important Stuff</div>
+          <div class = "roundCounter">
             <div class = "counterTxt">3</div>
           </div>
         </div>
-        <div class ="row1" id="listTab">
+        <div class ="listTab">
           <div class = "tabTxt">Third to last</div>
-          <div class = "span1" id ="roundCounter2">
+          <div class = "roundCounter">
             <div class = "counterTxt">2</div>
           </div>
         </div>
-        <div class ="row1" id="listTab">
+        <div class ="listTab">
           <div class = "tabTxt">Second to last</div>
-          <div class = "span1" id ="roundCounter2">
+          <div class = "roundCounter">
             <div class = "counterTxt">1</div>
           </div>
         </div>
-        <div class ="row1" id="listTab" style= "margin-bottom: 26px;" >
-          <div class = "tabTxt">Last one</div>
-          <div class = "span1" id ="roundCounter2">
-            <div class = "counterTxt">0</div>       
+        <div class ="listTab" id ="lastTab">
+          <div class = "tabTxt">Last</div>
+          <div class = "roundCounter">
+            <div class = "counterTxt">0</div>
           </div>
         </div>
       </div>

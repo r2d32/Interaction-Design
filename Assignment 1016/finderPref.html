@@ -70,18 +70,19 @@
           </div>
         </div>
         <p>New Finder windows open:</p>
-        <button class="btn btn-large dropdown-toggle" data-toggle="dropdown" id="dropDownBtn" >
-          <img src="home.png"id ="home"></img>
-          <div id ="btnTxt">Home</div>
-          <img src="upDown.png"id ="upDown"></img>
-        </button>
-          <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-            <li><a tabindex="-1" href="#">Action</a></li>
-            <li><a tabindex="-1" href="#">Another action</a></li>
-            <li><a tabindex="-1" href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a tabindex="-1" href="#">Separated link</a></li>
-          </ul>
+          <div class="dropdown">
+            <div class="row" class="dropdown-toggle" id="dropDownBtn" role="button" data-toggle="dropdown" data-target="#" href="/page.html" id="dropDownBtn" >
+              <div><img src="home.png"id ="home"></img></div>
+              <div class= "span1" id ="btnTxt">Home</div>
+              <div><img src="upDown.png"id ="upDown"></img></div>
+            </div>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+              <li><a tabindex="-1" href="#">Action</a></li>
+              <li><a tabindex="-1" href="#">Another action</a></li>
+              <li><a tabindex="-1" href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a tabindex="-1" href="#">Separated link</a></li>
+            </ul>
           </div>
         <label class="checkbox">
           <p><input type="checkbox">Always open folders in a new window</p>
@@ -91,20 +92,24 @@
         </label>
           <div class="row" id = "sliderRow"> 
             <div class="span4" id ="sT">Delay:</div>
-            <div class="span4">
+            <div class="span4" id="sliderDiv">
               <div id="slider"></div>
             </div>
+            <div class="span1" id= "markDiv" > 
+            <div class="span1" id= "mark1">|</div>
+            <div class="span1" id ="marks">|</div>
+            <div class="span1" id ="marks">|</div>
+            <div class="span1" id ="marks">|</div>
+            <div class="span1" id ="marks">|</div>
+            <div class="span1" id ="marks">|</div>
+            <div class="span1" id ="marks">|</div>
           </div>
-          <div class="row" > 
-            <div class="span4" id= "mark1" >|</div>
-            <div class="span4" id ="marks">|</div>
-            <div class="span4" id ="marks">|</div>
-            <div class="span4" id ="marks">|</div>
-            <div class="span4" id ="marks">|</div>
-            <div class="span4" id ="marks">|</div>
-            <div class="span4" id ="marks">|</div>
+          <div class="row" id="size">
+            <div class = "span1" id="txt">Short</div>
+            <div class = "span1" id="txt" style="margin-left: 14%;">Medium</div>
+            <div class = "span1" id="txt" style="margin-left: 20%;">Long</div>
           </div>
-        </p>
+          <div class="row" id="txt">Press the space bar to open immediately</div>
       </div>
     </body>
 </html>

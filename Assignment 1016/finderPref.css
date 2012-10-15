@@ -30,9 +30,9 @@ p{
    margin-left: 5em; 
 }
 #sT{
-	margin-left: 6.25em;
-	margin-top: -0.65em;
-	width: 34px;
+	margin-left: 1px;
+	margin-top: -6px;
+	width: 42px;
 }
 .ui-slider-horizontal {
 	height: .2em;
@@ -41,14 +41,16 @@ p{
 
 }
 #slider > a {
+	
 	border-color: #5F5D5D;
 	left: 50%;
 	height: 13px;
 	width: 12px;
+	
 }
 #mark1{
 	width: 9px;
-    margin-left: 28.5em;
+    margin-left: 0px;
     font-size: 5px
 
 }
@@ -57,27 +59,59 @@ p{
 	font-size: 5px
 }
 #dropDownBtn{
+	-moz-box-shadow:  1px 1px 1px rgba(34, 33, 33, 0.55);
+	-webkit-box-shadow:  1px 1px 1px rgba(34, 33, 33, 0.55);
+	box-shadow: 1px 1px 1px rgba(34, 33, 33, 0.55);
+	border: 1px;
 	width: 191.5px;
-	height: 11px;
-	margin-left: 4.5em;
-	border-color: #7E7E7E;
+	height: 20px;
+	border: 1px solid rgba(71, 71, 71, 0.68);
 	background-image: -webkit-linear-gradient(bottom, #F7F7F7 20%, #E0E0E0 60%, #F1F1F1 81%, #F7F7F7 100%);
+	border-radius: 4px;
+	margin-left: 0%;
+	margin-top: -1%;
+
 
 }
 #btnTxt{
-	
+	font-family: "Lucida Grande",Sans,Serif;
+	font-size: 12px;
 	display: inline-block;
-
 
 }
 #upDown{
 	
-	display: inline-block;
-
+display: inline-block;
 }
 #home{
+display: inline-block;
 
-	display: inline-block;
+}
+#sliderDiv{
+margin-left: 7px;
+margin-top: 2px;
 
-
+width: 180px;
+}
+#sliderRow{
+	margin-left: 67px;
+}
+#markDiv{
+	width: 190px;
+	height: 10px;
+	margin-top: 12px;
+	margin-left: -179px;
+}
+#slider{
+	width: 180px;
+}
+#size{
+	margin-top: 24px;
+	width: 273px;
+	margin-left: 5%;
+}
+#txt{
+	font-family: "Lucida Grande",Sans,Serif;
+	font-size: 11px;
+	margin-left: 1%;
 }
