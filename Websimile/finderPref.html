@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+    <head>
+      <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+      <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/css/bootstrap-combined.min.css">
+      <link rel="stylesheet" href="finderPref.css">
+      <link rel="stylesheet" href="finderPref.js">
+      <script src="http://code.jquery.com/jquery.min.js"></script>
+      <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/js/bootstrap.min.js"></script>
+      <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+      <meta charset="UTF-8" />
+      <!--Trigger slider-->
+      <script>
+      $(function() {
+        $( "#slider" ).slider({
+            value:100,
+            min: 0,
+            max: 6,
+            step: 1,
+            value: 3,
+        });
+      });
+      </script>
+      
+      <title>Finder Preferences</title>
+    </head>
+    
+    <body>
+      <div class="topMenu">
+        <div class="topMenuTxt" id = "General">
+          <img src="switch.png" >
+            <div>General</div>
+        </div>
+        <div class="topMenuTxt">
+          <img src="labels.png">
+            <div>Labels</div>
+        </div>
+        <div class="topMenuTxt">
+          <img src="sidebar.png">
+            <div>Sidebar</div>
+        </div>
+        <div class="topMenuTxt">
+          <img src="advanced.png">
+            <div>Advanced</div>
+        </div>
+      </div>
+      <p>Show these items on the desktop:</p>
+      <div class="lower">
+        <div class="bottomMenu">
+          <div>
+    	    <label class="checkbox">
+              <input type="checkbox">Hard disks
+            </label>
+          </div>
+          <div>
+    	    <label class="checkbox">
+              <input type="checkbox">External disks
+            </label>
+          </div>
+          <div>
+    	    <label class="checkbox">
+              <input type="checkbox">CDs, DVDs, and iPods
+            </label>
+          </div>
+          <div>
+    	    <label class="checkbox">
+              <input type="checkbox">Connected servers
+            </label>
+          </div>
+        </div>
+        <p>New Finder windows open:</p>
+          <div class="dropdown">
+            <div class="dropDownBtn" class="dropdown-toggle" role="button" data-toggle="dropdown" data-target="#" href="/page.html"  >
+              <div id ="home"  ><img src="home.png"></img></div>
+              <div id ="upDown"><img src="upDown.png"></img></div>
+              <div class= "btnTxt">Home</div>
+            </div>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+              <li><a tabindex="-1" href="#">Action</a></li>
+              <li><a tabindex="-1" href="#">Another action</a></li>
+              <li><a tabindex="-1" href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a tabindex="-1" href="#">Separated link</a></li>
+            </ul>
+          </div>
+        <label class="checkbox">
+          <p><input type="checkbox">Always open folders in a new window</p>
+        </label>
+        <label class="checkbox">
+          <p><input type="checkbox">Spring-loaded folders and windows</p>
+        </label>
+          <div class="sliderRow"> 
+            <div class="sliderText">Delay:</div>
+            <div id="slider"></div>
+          </div>
+          <div class="marksDiv" > 
+            <div class="marks">|</div>
+            <div class="marks">|</div>
+            <div class="marks">|</div>
+            <div class="marks">|</div>
+            <div class="marks">|</div>
+            <div class="marks">|</div>
+            <div class="marks">|</div>
+          </div>
+          <div class="size">
+            <div class = "txt">Short</div>
+            <div class ="txt" id="medium" style="margin-left: 14%;">Medium</div>
+            <div class ="txt" style="margin-left: 20%;">Long</div>
+          </div>
+          <div class="txt" id="lastTxt">Press the space bar to open immediately</div>
+      </div>
+    </body>
+</html>
