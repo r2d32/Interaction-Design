@@ -124,6 +124,8 @@
 	height: 32px;
 	-moz-box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.29);
 	-webkit-box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.29);
+	-ms-box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.29);
+	-o-box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.29);
 	box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.29);
 	
 }
@@ -154,12 +156,18 @@
 	height: 32px;
 	padding-top: 0px;
 	margin-top: 3px;
-	background: -webkit-gradient(linear, left top, left bottom, from(white), to(#E7E7E7));
+	background-image:   -webkit-linear-gradient(top, white , #E7E7E7);
+	background-image:   -moz-linear-gradient(top, white , #E7E7E7);
+	background-image:   -ms-linear-gradient(top, white , #E7E7E7);
+	background-image:   -o-linear-gradient(top, white , #E7E7E7);
 	-webkit-transition: all 1s;
 	transition: all 1s;
 	-moz-transition: all 1s;
+	-o-transition: all 1s;
+	-ms-transition: all 1s;
 	-moz-box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
-	-webkit-box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
+	-ms-box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
+	-o-box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
 	box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
 }
 .inboxC{
@@ -194,8 +202,10 @@
 }
 
 .listTab:active {
-	background: -webkit-gradient(linear, left top, left bottom, from(white), to(#979797));
-	background: -moz-gradient(linear, left top, left bottom, from(white), to(#979797));
+	background-image:   -webkit-linear-gradient(top, white , #979797);	
+	background-image:   -moz-linear-gradient(top, white , #979797);	
+	background-image:   -ms-linear-gradient(top, white , #979797);	
+	background-image:   -o-linear-gradient(top, white , #979797);	
 }
 
 .roundCounter{
@@ -206,8 +216,10 @@
 	float: right;
 	background: #E7E7E7;
 	border-radius: 9px;
-	-moz-box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.29);
 	-webkit-box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.11);
+	-moz-box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.29);
+	-ms-box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.29);
+	-o-box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.29);
 	box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.11);
 	border: 1px solid rgba(0, 0, 0, 0.14);
 }
