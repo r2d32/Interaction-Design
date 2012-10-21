@@ -5,12 +5,19 @@
     width: 228px;
     overflow: auto;
 	-webkit-box-shadow: 4px 4px 4px rgba(5, 5, 5, 0.64);
+	-moz-box-shadow: 4px 4px 4px rgba(5, 5, 5, 0.64);
+	-ms-box-shadow: 4px 4px 4px rgba(5, 5, 5, 0.64);
+	-o-box-shadow: 4px 4px 4px rgba(5, 5, 5, 0.64);
+	box-shadow: 4px 4px 4px rgba(5, 5, 5, 0.64);
 	margin-left: 12px;
 }
 
 .topMenu{
 	height: 34px;
-	background: -webkit-gradient(linear, left top, left bottom, from(#999797), to(#424242));
+	background-image: -webkit-linear-gradient(top, #999796 , #424242);
+    background-image: -moz-linear-gradient(top, #999796 , #424242); 
+    background-image:   -ms-linear-gradient(top, #999796 , #424242); 
+  	background-image:      -o-linear-gradient(top, #999796 , #424242); 
 	border-bottom: outset 1px black;
 	border-top: outset 1px #B1B1B1;
     position: fixed;
@@ -19,6 +26,8 @@
 
 .topBtn{
 	background-image: -webkit-linear-gradient(bottom, #303030 20%, #646464 59%, #868585 81%, #B6B6B6 100%);
+	background-image: -moz-linear-gradient(bottom, #303030 20%, #646464 59%, #868585 81%, #B6B6B6 100%);
+	background-image: -linear-gradient(bottom, #303030 20%, #646464 59%, #868585 81%, #B6B6B6 100%);
 	-moz-box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.09);
 	-webkit-box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.09);
 	box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.09);	
@@ -26,6 +35,9 @@
 	height: 25px;
 	text-align: center;
 	-webkit-box-shadow: 0px 1px 1px #676767;
+	-moz-box-shadow: 0px 1px 1px #676767;
+	-ms-box-shadow: 0px 1px 1px #676767;
+	-o-box-shadow: 0px 1px 1px #676767;
 	padding-top: 0px;
 	margin-top: 4px;
 	margin-left: 6px;
@@ -55,7 +67,11 @@
 
 .lowerMenu{
 	height: 34px;
-	background: -webkit-gradient(linear, left top, left bottom, from(#2C2C2C), to(black));	border-bottom: outset 1px black;
+	background: -webkit-gradient(linear, left top, left bottom, from(#2C2C2C), to(black));	
+	background-image:   -ms-linear-gradient(top, #2C2C2C , black); 	
+	background-image:   -moz-linear-gradient(top, #2C2C2C , black);
+	background-image:   -o-linear-gradient(top, #2C2C2C , black);
+	border-bottom: outset 1px black;
 	border-top: outset 1px rgba(82, 82, 82, 0.86);
 	width: 228px;
 	position: fixed;
@@ -106,7 +122,7 @@
 	margin-left: 10px;
 	border-radius: 3px;
 	height: 32px;
-	moz-box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.29);
+	-moz-box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.29);
 	-webkit-box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.29);
 	box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.29);
 	
@@ -140,6 +156,8 @@
 	margin-top: 3px;
 	background: -webkit-gradient(linear, left top, left bottom, from(white), to(#E7E7E7));
 	-webkit-transition: all 1s;
+	transition: all 1s;
+	-moz-transition: all 1s;
 	-moz-box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
 	-webkit-box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
 	box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
@@ -177,7 +195,7 @@
 
 .listTab:active {
 	background: -webkit-gradient(linear, left top, left bottom, from(white), to(#979797));
-	
+	background: -moz-gradient(linear, left top, left bottom, from(white), to(#979797));
 }
 
 .roundCounter{
@@ -188,7 +206,7 @@
 	float: right;
 	background: #E7E7E7;
 	border-radius: 9px;
-	moz-box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.29);
+	-moz-box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.29);
 	-webkit-box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.11);
 	box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.11);
 	border: 1px solid rgba(0, 0, 0, 0.14);
