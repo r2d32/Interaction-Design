@@ -1,0 +1,20 @@
+For the first part of the proficiency check, regarding the strength of the
+menus/forms/dialogs interaction style, you got everything totally right.
+
+1a, 1b, 1d: +
+
+For the second part, regarding the weakness of menus/forms/dialogs, you
+actually end up in a bit of a contradiction.  If a system is highly learnable,
+then it follows that it is memorable, because learnability means that a user
+can figure it out quickly without prior expsoure.  Thus, said user will not
+have an issue with figuring out a learnable system again after being away
+from it for a while!
+
+So you need to think about this further.  Review the handouts and the textbook
+(even if you did not buy it, I believe there is a copy in the Keck lab, and
+there are copies in the library).
+
+This answer detracts from your prior proficiency because it reveals a
+significant misunderstanding of how these metrics interact.
+
+1b, 1d: /
