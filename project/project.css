@@ -163,5 +163,56 @@ div{
 	width: 180px;
 
 }
-
-
+#feedback {
+	margin: 10px;
+	margin-bottom: 34px;
+	height: 15px;
+	font-size: 15px;
+	font-weight: 800;
+}
+#selectable .ui-selecting {
+	background: #FECA40; 
+}
+#selectable .ui-selected {
+	background: rgba(0, 0, 0, 0.32);
+	color: white; 
+}
+#selectable {
+	list-style-type: none; 
+	margin: 5px; 
+	padding: 0; 
+	width: 95%; 
+}
+#selectable li {
+	margin: 3px; 
+	padding: 0.4em; 
+	height: 15px;
+	font-size: 12px;
+	font-weight: 600;
+	height: 18px; 
+}
+.projectTab{
+	border-radius: 4px;
+	padding-top: 0px;
+	margin-top: 3px;
+	background-image:   -webkit-linear-gradient(top, rgba(255, 255, 255, 0.27) , rgba(231, 231, 231, 0.25));
+	background-image:   -moz-linear-gradient(top, rgba(255, 255, 255, 0.27) , rgba(231, 231, 231, 0.25));
+	background-image:   -ms-linear-gradient(top, rgba(255, 255, 255, 0.27) , rgba(231, 231, 231, 0.25));
+	background-image:   -o-linear-gradient(top, rgba(255, 255, 255, 0.27) , rgba(231, 231, 231, 0.25));
+	-webkit-transition: all 1s;
+	transition: all 1s;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
+	-ms-transition: all 1s;
+	-moz-box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
+	-ms-box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
+	-o-box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
+	box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
+}
+.projectTab:hover{
+	color: #6BDAFD;
+	-moz-box-shadow: 0 0 1px 1px rgba(120, 203, 250, 0.71);
+	-ms-box-shadow: 0 0 1px 1px rgba(120, 203, 250, 0.71);
+	-o-box-shadow: 0 0 1px 1px rgba(120, 203, 250, 0.71);
+	box-shadow: 0 0 1px 1px rgba(120, 203, 250, 0.71);
+}

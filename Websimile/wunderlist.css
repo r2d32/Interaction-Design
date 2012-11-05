@@ -235,3 +235,20 @@
 #lastTab{
 	margin-bottom:25px;
 }
+.projectTab{
+	padding-top: 0px;
+	margin-top: 3px;
+	background-image:   -webkit-linear-gradient(top, white , #E7E7E7);
+	background-image:   -moz-linear-gradient(top, white , #E7E7E7);
+	background-image:   -ms-linear-gradient(top, white , #E7E7E7);
+	background-image:   -o-linear-gradient(top, white , #E7E7E7);
+	-webkit-transition: all 1s;
+	transition: all 1s;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
+	-ms-transition: all 1s;
+	-moz-box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
+	-ms-box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
+	-o-box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
+	box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
+}
