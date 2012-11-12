@@ -195,10 +195,10 @@ div{
 	border-radius: 4px;
 	padding-top: 0px;
 	margin-top: 3px;
-	background-image:   -webkit-linear-gradient(top, rgba(255, 255, 255, 0.27) , rgba(231, 231, 231, 0.25));
-	background-image:   -moz-linear-gradient(top, rgba(255, 255, 255, 0.27) , rgba(231, 231, 231, 0.25));
-	background-image:   -ms-linear-gradient(top, rgba(255, 255, 255, 0.27) , rgba(231, 231, 231, 0.25));
-	background-image:   -o-linear-gradient(top, rgba(255, 255, 255, 0.27) , rgba(231, 231, 231, 0.25));
+	background-image:   -webkit-linear-gradient(top, rgba(255, 255, 255, 1) , rgba(231, 231, 231, 1));
+	background-image:   -moz-linear-gradient(top, rgba(255, 255, 255, 1) , rgba(231, 231, 231, 1));
+	background-image:   -ms-linear-gradient(top, rgba(255, 255, 255, 1) , rgba(231, 231, 231, 1));
+	background-image:   -o-linear-gradient(top, rgba(255, 255, 255, 1) , rgba(231, 231, 231, 1));
 	-webkit-transition: all 1s;
 	transition: all 1s;
 	-moz-transition: all 1s;
@@ -215,4 +215,15 @@ div{
 	-ms-box-shadow: 0 0 1px 1px rgba(120, 203, 250, 0.71);
 	-o-box-shadow: 0 0 1px 1px rgba(120, 203, 250, 0.71);
 	box-shadow: 0 0 1px 1px rgba(120, 203, 250, 0.71);
+}
+#proListContainer{
+	width: 260px;
+	height: 220px;
+	margin-top: 0px;
+	margin-left: 10px;
+	overflow: auto;
+	background-color: #919191;
+	-moz-box-shadow: inset 0 0 10px #000000;
+	-webkit-box-shadow: inset 0 0 14px black;
+	box-shadow: inset 0 0 10px black;
 }
