@@ -18,11 +18,19 @@
     -moz-box-shadow: 0px 0px 6px #88F;
     -webkit-box-shadow: 0px 0px 6px #88F;
 }
-.corner-highlight{
+.cornerL-highlight{
+    float: left;
+    border: thin solid black;
+    width: 7px;
+    height: 7px;
+    margin-top: -1px;
+    margin-left: -1px
+}
+.cornerR-highlight{
     float: right;
     border: thin solid black;
-    width: 5px;
-    height: 5px;
+    width: 7px;
+    height: 7px;
     margin-top: -1px;
     margin-right: -1px
 }

@@ -38,17 +38,18 @@ var Boxes = {
             // Add a new box to the drawing area.  Note how we use
             // the drawing area as a holder of "local" variables
             // ("this" as standardized by jQuery).
-            this.anchorX = event.pageX;
-            this.anchorY = event.pageY;
+            this.anchorX = event.pageX;///corner where you start drawing and remains constant
+            this.anchorY = event.pageY;///corner where you start drawing and remains constant
             this.drawingBox = $("<div></div>")
                 .appendTo(this)
                 .addClass("box")
-                .offset({ left: this.anchorX, top: this.anchorY });
+                .offset({ left: this.anchorX, top: this.anchorY });///sets x & y for new Div
 
             // Take away the highlight behavior while the draw is
             // happening.
             Boxes.setupDragState();
             $("<div></div>").appendTo(this.drawingBox).addClass("cornerR");
+            $("<div></div>").appendTo(this.drawingBox).addClass("cornerL");
         }
 
     },
@@ -58,7 +59,7 @@ var Boxes = {
      */
     trackDrag: function (event) {
         // Don't bother if we aren't tracking anything.
-        if (this.drawingBox) {
+        if (this.drawingBox) { ///for drawing the object
             // Calculate the new box location and dimensions.  Note how
             // this might require a "corner switch."
             var newOffset = {
@@ -83,7 +84,7 @@ var Boxes = {
      * Concludes a drawing or moving sequence.
      */
     endDrag: function (event) {
-        if (this.drawingBox) {
+        if (this.drawingBox) {///when you are on drawing state
             // Finalize things by setting the box's behavior.
             this.drawingBox
                 .mousemove(Boxes.highlight)
@@ -92,7 +93,7 @@ var Boxes = {
             
             // All done.
             this.drawingBox = null;
-        } else if (this.movingBox) {
+        } else if (this.movingBox) { ///when you are on moving state 
             // Change state to "not-moving-anything" by clearing out
             // this.movingBox.
             this.movingBox = null;
@@ -111,6 +112,8 @@ var Boxes = {
      */
     highlight: function () {
         $(this).addClass("box-highlight");
+        $(this).find(".cornerR").addClass("cornerR-highlight");
+        $(this).find(".cornerL").addClass("cornerL-highlight");
     },
 
     /**
@@ -118,6 +121,9 @@ var Boxes = {
      */
     unhighlight: function () {
         $(this).removeClass("box-highlight");
+        $(this).find(".cornerR").removeClass("cornerR-highlight");
+        $(this).find(".cornerL").removeClass("cornerL-highlight");
+
     },
 
     /**
@@ -127,27 +133,27 @@ var Boxes = {
         // We only move using the left mouse button.
         if (event.which === Boxes.LEFT_BUTTON) {
             // Take note of the box's current (global) location.
-            var jThis = $(this),
-                startOffset = jThis.offset(),
+            var jThis = $(this),///jThis is the current box
+                startOffset = jThis.offset(),///remember top left corner
 
                 // Grab the drawing area (this element's parent).
                 // We want the actual element, and not the jQuery wrapper
                 // that usually comes with it.
-                parent = jThis.parent().get(0);
+                parent = jThis.parent().get(0);///pic 1
 
             // Set the drawing area's state to indicate that it is
             // in the middle of a move.
-            parent.movingBox = jThis;
+            parent.movingBox = jThis;///get coordinates within drawing area 
             parent.deltaX = event.pageX - startOffset.left;
             parent.deltaY = event.pageY - startOffset.top;
-
+///resize goes here
             // Take away the highlight behavior while the move is
             // happening.
             Boxes.setupDragState();
 
             // Eat up the event so that the drawing area does not
             // deal with it.
-            event.stopPropagation();
+            event.stopPropagation();///pic 2 prevent the mousedown to cascade to drawing area and so on ...
         }
     }
 
