@@ -41,30 +41,39 @@
           </div>
           <div class="menu" id="proList">
             <p id="feedback">
-              <span>Now Showing: </span> <span id="select-result">none</span>.
+              <span>Now Showing: </span> <span class="select-result">none</span>.
             </p>
             <div class="menu" id="proListContainer">
               <ol id="selectable">
-                  <li class="projectTab">Finder Preferences Websimili </li>
-                  <li class="projectTab">Project 2</li>
-                  <li class="projectTab">Project 3</li>
-                  <li class="projectTab">Project 4</li>
-                  <li class="projectTab">Project 5</li>
-                  <li class="projectTab">Project 6</li>
-                  <li class="projectTab">Project 2</li>
-                  <li class="projectTab">Project 3</li>
-                  <li class="projectTab">Project 4</li>
-                  <li class="projectTab">Project 5</li>
-                  <li class="projectTab">Project 6</li>
+                <li class="projectTab">Finder Preferences Websimili</li>
+                <li class="projectTab">Wunderlist Websimili</li>
+                <li class="projectTab">Nothing</li>
+                <li class="projectTab">Project 4</li>
+                <li class="projectTab">Project 5</li>
+                <li class="projectTab">Project 6</li>
+                <li class="projectTab">Project 2</li>
+                <li class="projectTab">Hello</li>
+                <li class="projectTab">Project 4</li>
+                <li class="projectTab">Project 5</li>
+                <li class="projectTab">Project 6</li>
               </ol>
             </div>
           </div>
         </div>
         <div class="rMenus">
-          <iframe class="menu" id="proExp" src="http://my.cs.lmu.edu/~cagudo/cmsi370/websimile/finderPref.html">
+          <iframe class="menu" id="proExp" src="">
           </iframe>
         </div>
       </div>
     </div>
+    <script>
+      $(".projectTab").click(function () {
+          var nnn = $(this).text();
+          var sites = ["http://my.cs.lmu.edu/~cagudo/cmsi370/websimile/finderPref.html", 
+              "http://my.cs.lmu.edu/~cagudo/cmsi370/websimile/wunderlist.html"];
+          $(".select-result").text(nnn);
+          $('#proExp')[0].src = sites[$(this).index()];
+      });
+    </script>
   </body>
 </html>
