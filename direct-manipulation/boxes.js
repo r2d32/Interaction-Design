@@ -49,7 +49,6 @@ var Boxes = {
             // happening.
             Boxes.setupDragState();
             $("<div></div>").appendTo(this.drawingBox).addClass("cornerR");
-            $("<div></div>").appendTo(this.drawingBox).addClass("cornerL");
         }
 
     },
@@ -113,7 +112,6 @@ var Boxes = {
     highlight: function () {
         $(this).addClass("box-highlight");
         $(this).find(".cornerR").addClass("cornerR-highlight");
-        $(this).find(".cornerL").addClass("cornerL-highlight");
     },
 
     /**
@@ -122,7 +120,6 @@ var Boxes = {
     unhighlight: function () {
         $(this).removeClass("box-highlight");
         $(this).find(".cornerR").removeClass("cornerR-highlight");
-        $(this).find(".cornerL").removeClass("cornerL-highlight");
 
     },
 
@@ -134,8 +131,7 @@ var Boxes = {
         if (event.which === Boxes.LEFT_BUTTON) {
             // Take note of the box's current (global) location.
             var jThis = $(this),///jThis is the current box
-                startOffset = jThis.offset(),///remember top left corner
-
+                startOffset = jThis.offset(),///remember top left cor
                 // Grab the drawing area (this element's parent).
                 // We want the actual element, and not the jQuery wrapper
                 // that usually comes with it.
@@ -146,7 +142,13 @@ var Boxes = {
             parent.movingBox = jThis;///get coordinates within drawing area 
             parent.deltaX = event.pageX - startOffset.left;
             parent.deltaY = event.pageY - startOffset.top;
-///resize goes here
+            if (parent.deltaY < 10 && parent.deltaX > ($(this).width() - 10)) {///resize goes here
+                console.log('It is time for change');
+            }
+            console.log('with'+ $(this).width());
+            console.log('deltaX'+ parent.deltaX);
+            console.log('height'+ $(this).height());
+            console.log('deltaY'+ parent.deltaY);
             // Take away the highlight behavior while the move is
             // happening.
             Boxes.setupDragState();
