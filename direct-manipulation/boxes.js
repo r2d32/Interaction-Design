@@ -142,13 +142,12 @@ var Boxes = {
             parent.movingBox = jThis;///get coordinates within drawing area 
             parent.deltaX = event.pageX - startOffset.left;
             parent.deltaY = event.pageY - startOffset.top;
-            if (parent.deltaY < 10 && parent.deltaX > ($(this).width() - 10)) {///resize goes here
+            if (parent.deltaY < 10 && parent.deltaX > ($(this).width() - 10)) {
                 console.log('It is time for change');
+                ////How can I set the drag state for a new kind of drag called resizeBox?
+                ////How can I prevent it to go back to startMove after I resize it?
+
             }
-            console.log('with'+ $(this).width());
-            console.log('deltaX'+ parent.deltaX);
-            console.log('height'+ $(this).height());
-            console.log('deltaY'+ parent.deltaY);
             // Take away the highlight behavior while the move is
             // happening.
             Boxes.setupDragState();
