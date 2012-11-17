@@ -3,7 +3,6 @@
 
 
 body{
-	background-image:url('greyBack.jpg');
 	background-attachment: fixed;
 	background-position: center;
 	background-size: 100% 100%;
@@ -216,6 +215,13 @@ div{
 	-o-box-shadow: 0 0 1px 1px rgba(120, 203, 250, 0.71);
 	box-shadow: 0 0 1px 1px rgba(120, 203, 250, 0.71);
 }
+.projectTab:active {
+	background-image:   -webkit-linear-gradient(top, white , #979797);	
+	background-image:   -moz-linear-gradient(top, white , #979797);	
+	background-image:   -ms-linear-gradient(top, white , #979797);	
+	background-image:   -o-linear-gradient(top, white , #979797);	
+}
+
 #proListContainer{
 	width: 260px;
 	height: 220px;
