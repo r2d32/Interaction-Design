@@ -145,8 +145,15 @@ var Boxes = {
             if (parent.deltaY < 10 && parent.deltaX > ($(this).width() - 10)) {
                 console.log('It is time for change');
                 ////How can I set the drag state for a new kind of drag called resizeBox?
-                ////How can I prevent it to go back to startMove after I resize it?
+                // JD: Short answer---set it any way you want/need.  Longer answer: for
+                //     the other states, we set a property in the drawing area (e.g.,
+                //     drawingBox, movingBox).  Is there something keeping you from
+                //     doing that for a resizeBox?
 
+                ////How can I prevent it to go back to startMove after I resize it?
+                // JD: I'm not sure what you mean by "go back to startMove," but if I
+                //     were to guess, you don't want to run the code beyond this if
+                //     statement.  In that case, just use a return statement.
             }
             // Take away the highlight behavior while the move is
             // happening.
