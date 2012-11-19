@@ -38,12 +38,12 @@ var Boxes = {
             // Add a new box to the drawing area.  Note how we use
             // the drawing area as a holder of "local" variables
             // ("this" as standardized by jQuery).
-            this.anchorX = event.pageX;///corner where you start drawing and remains constant
-            this.anchorY = event.pageY;///corner where you start drawing and remains constant
+            this.anchorX = event.pageX;
+            this.anchorY = event.pageY;
             this.drawingBox = $("<div></div>")
                 .appendTo(this)
                 .addClass("box")
-                .offset({ left: this.anchorX, top: this.anchorY });///sets x & y for new Div
+                .offset({ left: this.anchorX, top: this.anchorY });
 
             // Take away the highlight behavior while the draw is
             // happening.
@@ -58,7 +58,7 @@ var Boxes = {
      */
     trackDrag: function (event) {
         // Don't bother if we aren't tracking anything.
-        if (this.drawingBox) { ///for drawing the object
+        if (this.drawingBox) { 
             // Calculate the new box location and dimensions.  Note how
             // this might require a "corner switch."
             var newOffset = {
@@ -70,12 +70,26 @@ var Boxes = {
                 .offset(newOffset)
                 .width(Math.abs(event.pageX - this.anchorX))
                 .height(Math.abs(event.pageY - this.anchorY));
+        } else if (this.resizingBox) {
+            // Resizing the object.
+            this.resizingBox.offset({
+                left: parent.deltaX,
+                top: parent.deltaY
+            });
+            this.resizingBox.width(Math.abs(event.pageX - this.anchorX))
+                .height(Math.abs(event.pageY - this.anchorY));
         } else if (this.movingBox) {
             // Reposition the object.
-            this.movingBox.offset({
-                left: event.pageX - this.deltaX,
-                top: event.pageY - this.deltaY
-            });
+            if((event.pageX - this.deltaX) > 550 ||(event.pageY - this.deltaY) > 550){ 
+                $(".drawing-area .box").remove(); 
+                event.stopPropagation();
+                this.movingBox = null;
+            }else{
+                this.movingBox.offset({
+                    left: event.pageX - this.deltaX,
+                    top: event.pageY - this.deltaY
+                });
+            }
         }
     },
 
@@ -83,7 +97,7 @@ var Boxes = {
      * Concludes a drawing or moving sequence.
      */
     endDrag: function (event) {
-        if (this.drawingBox) {///when you are on drawing state
+        if (this.drawingBox) {
             // Finalize things by setting the box's behavior.
             this.drawingBox
                 .mousemove(Boxes.highlight)
@@ -92,7 +106,13 @@ var Boxes = {
             
             // All done.
             this.drawingBox = null;
-        } else if (this.movingBox) { ///when you are on moving state 
+        } else if (this.resizingBox) { 
+            // Change state to "not-moving-anything" by clearing out
+            // this.movingBox.
+            this.resizingBox = null;
+            this.movingBox = null;
+
+        } else if (this.movingBox) { 
             // Change state to "not-moving-anything" by clearing out
             // this.movingBox.
             this.movingBox = null;
@@ -130,38 +150,33 @@ var Boxes = {
         // We only move using the left mouse button.
         if (event.which === Boxes.LEFT_BUTTON) {
             // Take note of the box's current (global) location.
-            var jThis = $(this),///jThis is the current box
-                startOffset = jThis.offset(),///remember top left cor
+            var jThis = $(this),//jThis is the current box
+                startOffset = jThis.offset(),
                 // Grab the drawing area (this element's parent).
                 // We want the actual element, and not the jQuery wrapper
                 // that usually comes with it.
-                parent = jThis.parent().get(0);///pic 1
+                parent = jThis.parent().get(0);//pic 1
 
             // Set the drawing area's state to indicate that it is
             // in the middle of a move.
-            parent.movingBox = jThis;///get coordinates within drawing area 
+            parent.movingBox = jThis;//get coordinates within drawing area 
             parent.deltaX = event.pageX - startOffset.left;
             parent.deltaY = event.pageY - startOffset.top;
-            if (parent.deltaY < 10 && parent.deltaX > ($(this).width() - 10)) {
-                console.log('It is time for change');
-                ////How can I set the drag state for a new kind of drag called resizeBox?
-                // JD: Short answer---set it any way you want/need.  Longer answer: for
-                //     the other states, we set a property in the drawing area (e.g.,
-                //     drawingBox, movingBox).  Is there something keeping you from
-                //     doing that for a resizeBox?
 
-                ////How can I prevent it to go back to startMove after I resize it?
-                // JD: I'm not sure what you mean by "go back to startMove," but if I
-                //     were to guess, you don't want to run the code beyond this if
-                //     statement.  In that case, just use a return statement.
+            if (parent.deltaY > ($(this).width() - 10) && parent.deltaX > ($(this).width() - 10)) {
+                console.log('It is time for change');
+                parent.resizingBox = jThis;
+                Boxes.setupDragState();
+                event.stopPropagation();
             }
+
             // Take away the highlight behavior while the move is
             // happening.
             Boxes.setupDragState();
 
             // Eat up the event so that the drawing area does not
             // deal with it.
-            event.stopPropagation();///pic 2 prevent the mousedown to cascade to drawing area and so on ...
+            event.stopPropagation();//pic 2 prevent the mousedown to cascade to drawing area and so on ...
         }
     }
 
