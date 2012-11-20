@@ -79,12 +79,27 @@ var Boxes = {
             this.resizingBox.width(Math.abs(event.pageX - this.anchorX))
                 .height(Math.abs(event.pageY - this.anchorY));
         } else if (this.movingBox) {
-            // Reposition the object.
+            // Reposition the object.(possible deletion)
             if((event.pageX - this.deltaX) > 550 ||(event.pageY - this.deltaY) > 550){ 
-                $(".drawing-area .box").remove(); 
-                event.stopPropagation();
-                this.movingBox = null;
+                // Deletion movement
+                
+                var deletionMessage = confirm("Do you want to delet this box?")
+                
+                if ( deletionMessage ==true){
+
+                    $(this.movingBox).remove(); 
+                    event.stopPropagation();
+                    this.movingBox = null;
+                    alert("You deleted the box")
+
+                }else{
+
+                    this.movingBox.offset({ left: 75, top: 75 });
+                
+                }
             }else{
+                // Regular movement
+
                 this.movingBox.offset({
                     left: event.pageX - this.deltaX,
                     top: event.pageY - this.deltaY
