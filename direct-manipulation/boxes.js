@@ -135,6 +135,10 @@ var Boxes = {
         } else if (this.resizingBox) { 
             // Change state to "not-moving-anything" by clearing out
             // this.movingBox.
+            this.resizingBox.offset({
+                    left: (this.anchorX < event.pageX) ? this.anchorX : event.pageX,
+                    top: (this.anchorY < event.pageY) ? this.anchorY : event.pageY
+                });
             this.resizingBox = null;
             this.movingBox = null;
 
