@@ -61,6 +61,7 @@ var Boxes = {
         if (this.drawingBox) { 
             // Calculate the new box location and dimensions.  Note how
             // this might require a "corner switch."
+
             var newOffset = {
                 left: (this.anchorX < event.pageX) ? this.anchorX : event.pageX,
                 top: (this.anchorY < event.pageY) ? this.anchorY : event.pageY
@@ -70,14 +71,24 @@ var Boxes = {
                 .offset(newOffset)
                 .width(Math.abs(event.pageX - this.anchorX))
                 .height(Math.abs(event.pageY - this.anchorY));
-        } else if (this.resizingBox) {
+        }else if (this.resizingBox) {
+
             // Resizing the object.
-            this.resizingBox.offset({
-                left: parent.deltaX,
-                top: parent.deltaY
-            });
-            this.resizingBox.width(Math.abs(event.pageX - this.anchorX))
-                .height(Math.abs(event.pageY - this.anchorY));
+           // this.anchorX = this.resizingBox.width + this.resizingBox.position().left;
+          //  this.anchorY = this.resizingBox.height + this.resizingBox.position().top;
+            var newOffset = {
+                left: (this.anchorX < event.pageX) ? this.anchorX : event.pageX,
+                top: (this.anchorY < event.pageY) ? this.anchorY : event.pageY
+            };
+                console.log("anchorX "+ this.anchorX );
+                console.log("anchorY "+ this.anchorY );         
+                this.resizingBox
+                .offset(newOffset)
+                .width(Math.abs(event.pageX - this.anchorX))
+                .height(Math.abs(event.pageY - this.anchorY)); 
+
+               
+            
         } else if (this.movingBox) {
             // Reposition the object.(possible deletion)
             if((event.pageX - this.deltaX) > 550 ||(event.pageY - this.deltaY) > 550){ 
@@ -152,6 +163,7 @@ var Boxes = {
     /**
      * Indicates that an element is unhighlighted.
      */
+
     unhighlight: function () {
         $(this).removeClass("box-highlight");
         $(this).find(".cornerR").removeClass("cornerR-highlight");
@@ -174,16 +186,22 @@ var Boxes = {
 
             // Set the drawing area's state to indicate that it is
             // in the middle of a move.
-            parent.movingBox = jThis;//get coordinates within drawing area 
-            parent.deltaX = event.pageX - startOffset.left;
-            parent.deltaY = event.pageY - startOffset.top;
+            //get coordinates within drawing area
 
-            if (parent.deltaY > ($(this).width() - 10) && parent.deltaX > ($(this).width() - 10)) {
-                console.log('It is time for change');
+            if(Math.abs(event.pageX - (jThis.position().left + $(this).width())) < 20 && Math.abs(event.pageY - (jThis.position().top + $(this).height())) < 20){
+                //alert(true);
                 parent.resizingBox = jThis;
-                Boxes.setupDragState();
-                event.stopPropagation();
+                this.anchorX = startOffset.left;
+                this.anchorY = startOffset.top;
+                parent.deltaX = event.pageX - startOffset.left;
+                parent.deltaY = event.pageY - startOffset.top;
+                
+            }else{
+                parent.movingBox = jThis;
+                parent.deltaX = event.pageX - startOffset.left;
+                parent.deltaY = event.pageY - startOffset.top;
             }
+        
 
             // Take away the highlight behavior while the move is
             // happening.
