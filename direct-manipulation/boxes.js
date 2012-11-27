@@ -74,15 +74,22 @@ var Boxes = {
         }else if (this.resizingBox) {
 
             // Resizing the object.
+            // JD: You have version control---this commented-out code block
+            //     does not have to stay here.
            // this.anchorX = this.resizingBox.width + this.resizingBox.position().left;
           //  this.anchorY = this.resizingBox.height + this.resizingBox.position().top;
             var newOffset = {
                 left: (this.anchorX < event.pageX) ? this.anchorX : event.pageX,
                 top: (this.anchorY < event.pageY) ? this.anchorY : event.pageY
             };
+            
+                // JD: Take note, what is "this" in this code, from which you are
+                //     reading anchorX and anchorY?  Compare it to the "this" in
+                //     startMove, which sets anchorX and anchorY.
                 console.log("anchorX "+ this.anchorX );
                 console.log("anchorY "+ this.anchorY );         
                 this.resizingBox
+                    // JD: JQuery chains should be indented.
                 .offset(newOffset)
                 .width(Math.abs(event.pageX - this.anchorX))
                 .height(Math.abs(event.pageY - this.anchorY)); 
@@ -91,11 +98,15 @@ var Boxes = {
             
         } else if (this.movingBox) {
             // Reposition the object.(possible deletion)
+            // JD: 550x550 is unnecessarily hardcoded!  What if the page designer
+            //     modifies the position and size of the drawing area?
             if((event.pageX - this.deltaX) > 550 ||(event.pageY - this.deltaY) > 550){ 
                 // Deletion movement
                 
                 var deletionMessage = confirm("Do you want to delet this box?")
-                
+                // JD: ^ A missing semicolon---no excuse for that!
+                //     And in the line below...let's just say, you should show that
+                //     to Dr. Toal and ask him what's wrong with it.
                 if ( deletionMessage ==true){
 
                     $(this.movingBox).remove(); 
@@ -104,7 +115,9 @@ var Boxes = {
                     alert("You deleted the box")
 
                 }else{
-
+                    // JD: I find this a somewhat arbitrary choice for what to do when
+                    //     a move is cancelled---but it will not be necessary if you
+                    //     modify the user interface as suggested in the feedback.
                     this.movingBox.offset({ left: 75, top: 75 });
                 
                 }
@@ -192,15 +205,19 @@ var Boxes = {
             // in the middle of a move.
             //get coordinates within drawing area
 
+            // JD: This conditoin can be made much more readable than it currently is.
             if(Math.abs(event.pageX - (jThis.position().left + $(this).width())) < 20 && Math.abs(event.pageY - (jThis.position().top + $(this).height())) < 20){
                 //alert(true);
                 parent.resizingBox = jThis;
+                // JD: See my comment in line 86.
                 this.anchorX = startOffset.left;
                 this.anchorY = startOffset.top;
                 parent.deltaX = event.pageX - startOffset.left;
                 parent.deltaY = event.pageY - startOffset.top;
                 
             }else{
+                // ^JD: You really shouldn't be producing code spaced like the line
+                //      above anymore, at your level.
                 parent.movingBox = jThis;
                 parent.deltaX = event.pageX - startOffset.left;
                 parent.deltaY = event.pageY - startOffset.top;

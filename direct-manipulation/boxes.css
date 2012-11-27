@@ -18,6 +18,8 @@
     -moz-box-shadow: 0px 0px 6px #88F;
     -webkit-box-shadow: 0px 0px 6px #88F;
 }
+
+/* JD: This can be spaced better (see above). */
 .cornerL-highlight{
     float: left;
     border: thin solid black;
