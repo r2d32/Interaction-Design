@@ -1,3 +1,26 @@
+Feedback 2012-11-29:
+
+Your latest proficiency check answers are now almost entirely right.  Efficiency
+is indeed the weakest metric of the menus/forms/dialogs interaction style.
+
+Your explanation and your fix, however, are in the right direction but not paint
+a complete picture.  In your explanation, for example, you seem to imply that
+recognizable and clear objects automatically make something inefficient; that is
+not the case.  You do say that menus are not focused on rapid access, and that
+would be correct, but you never quite get to a specific reason why access to
+menus might not be as fast as possible.
+
+Your fix, which is to make menu items larger and possibly skeuomorphic, has
+potential to address the efficiency issue but not in a general sense.  In other
+words, this fix will not guarantee improved efficiency for all menus.  There is
+a fix that does---and it is related to the specific reason for why menus, by
+default, tend to not be very efficient.
+
+1b: +, 1d: |
+
+
+Feedback 2012-11-05:
+
 For the first part of the proficiency check, regarding the strength of the
 menus/forms/dialogs interaction style, you got everything totally right.
 
