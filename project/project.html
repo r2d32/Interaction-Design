@@ -83,14 +83,5 @@
           $('#proExp')[0].src = sites[$(this).index()];
       });
     </script>
-    <script  type="text/javascript">
-      function changeImg(imgNumber) {
-        var myImages = ['green.jpg', 'purple.jpg', 'blue.png','orange.png','red.png'];
-        var imgShown = document.body.style.backgroundImage;
-        var newImgNumber =Math.floor(Math.random()*myImages.length);
-        document.body.style.backgroundImage = 'url('+myImages[newImgNumber]+')';
-      }
-      window.onload=changeImg;
-    </script>
   </body>
 </html>

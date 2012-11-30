@@ -1,0 +1,10 @@
+body{
+    background-image:url('greyBack1.jpg');
+    background-repeat:no-repeat;
+    background-color:black;
+    background-attachment: fixed;
+    background-position: center;
+}
+div{
+    display: block;
+}
