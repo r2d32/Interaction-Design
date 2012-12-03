@@ -1,0 +1,111 @@
+body{
+    background-image:url('greyBack1.jpg');
+    background-repeat:no-repeat;
+    background-color:black;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+div{
+    display: block;
+}
+.menu{
+    width: 500px;
+    height: 600px;
+    margin-left: 360px;
+    margin-top: 56px;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.90);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    -ms-transition: all 1s;
+    -moz-box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
+    -ms-box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
+    -o-box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
+    box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
+
+}
+.rMenus{
+    float: right;
+    width: 537px;
+    height: 900px;
+}
+#proList{
+    position: fixed;
+    margin-top: 241px;
+    margin-left: 20px;
+    height: 300px;
+    width: 280px;
+}
+#feedback {
+    margin: 10px;
+    margin-bottom: 34px;
+    height: 15px;
+    font-size: 15px;
+    font-weight: 800;
+}
+#selectable .ui-selecting {
+    background: #FECA40; 
+}
+#selectable .ui-selected {
+    background: rgba(0, 0, 0, 0.32);
+    color: white; 
+}
+#selectable {
+    list-style-type: none; 
+    margin: 5px; 
+    padding: 0; 
+    width: 95%; 
+}
+#selectable li {
+    margin: 3px; 
+    padding: 0.4em; 
+    height: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    height: 18px; 
+}
+.projectTab{
+    border-radius: 4px;
+    padding-top: 0px;
+    margin-top: 3px;
+    background-image:   -webkit-linear-gradient(top, rgba(255, 255, 255, 1) , rgba(231, 231, 231, 1));
+    background-image:   -moz-linear-gradient(top, rgba(255, 255, 255, 1) , rgba(231, 231, 231, 1));
+    background-image:   -ms-linear-gradient(top, rgba(255, 255, 255, 1) , rgba(231, 231, 231, 1));
+    background-image:   -o-linear-gradient(top, rgba(255, 255, 255, 1) , rgba(231, 231, 231, 1));
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    -ms-transition: all 1s;
+    -moz-box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
+    -ms-box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
+    -o-box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
+    box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
+}
+.projectTab:hover{
+    color: #6BDAFD;
+    -moz-box-shadow: 0 0 1px 1px rgba(120, 203, 250, 0.71);
+    -ms-box-shadow: 0 0 1px 1px rgba(120, 203, 250, 0.71);
+    -o-box-shadow: 0 0 1px 1px rgba(120, 203, 250, 0.71);
+    box-shadow: 0 0 1px 1px rgba(120, 203, 250, 0.71);
+}
+.projectTab:active {
+    background-image:   -webkit-linear-gradient(top, white , #979797);  
+    background-image:   -moz-linear-gradient(top, white , #979797); 
+    background-image:   -ms-linear-gradient(top, white , #979797);  
+    background-image:   -o-linear-gradient(top, white , #979797);   
+}
+
+#proListContainer{
+    width: 260px;
+    height: 220px;
+    margin-top: 0px;
+    margin-left: 10px;
+    overflow: auto;
+    background-color: #919191;
+    -moz-box-shadow: inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 14px black;
+    bo
