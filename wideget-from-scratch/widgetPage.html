@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/css/bootstrap-combined.min.css">
+    <link rel="stylesheet" href="widgetPage.css">
+    <meta charset="utf-8" />
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <meta charset="UTF-8" />
+    <title>Portfolio-Main</title>
+  </head>
+  <body>
+    <div class="menu" id="proList">
+      <p class="containerTitle" id="feedback">
+        <span>Now Showing: </span> <span class="select-result">none</span>.
+      </p>
+      <div class="menu" id="proListContainer">
+        <ol class="selectable">
+          <li class="projectTab">Example 1</li>
+          <li class="projectTab">Example 2</li>
+          <li class="projectTab">Another</li>
+          <li class="projectTab">Another</li>
+          <li class="projectTab">Another</li>
+          <li class="projectTab">Another</li>
+          <li class="projectTab">Another</li>
+          <li class="projectTab">Another</li>
+          <li class="projectTab">Another</li>
+          <li class="projectTab">Another</li>
+          <li class="projectTab">Another</li>
+        </ol>
+      </div>
+    </div>
+    <div class="menu" id="proList2">
+      <p class="containerTitle" >
+        <span>More fun </span> 
+      </p>
+      <div class="menu" id="proListContainer2">
+        <ol class="selectable">
+          <li class="projectTab">Dog Bounces off</li>
+          <li class="projectTab">Another</li>
+          <li class="projectTab">Another</li>
+          <li class="projectTab">Another</li>
+          <li class="projectTab">Another</li>
+          <li class="projectTab">Another</li>
+          <li class="projectTab">Another</li>
+          <li class="projectTab">Another</li>
+          <li class="projectTab">Another</li>
+          <li class="projectTab">Another</li>
+          <li class="projectTab">Another</li>
+        </ol>
+      </div>
+    </div>
+    <iframe class="menu" id="proExp" src=""></iframe>
+    <script>
+      $(".projectTab").click(function () {
+          var currCont = $(this).parent().parent().attr("id");
+          var nnn = $(this).text();
+          if( currCont == "proListContainer"){
+            var sites = ["http://my.cs.lmu.edu/~cagudo/cmsi370/Websimile/finderPref.html", 
+                "http://my.cs.lmu.edu/~cagudo/cmsi370/Websimile/wunderlist.html","mental-model-paper.pdf","http://www.youtube.com/embed/9owHaf9c0kk"];
+            $('#proExp')[0].src = sites[$(this).index()];
+          } else if (currCont == "proListContainer2"){
+            var sites = ["http://www.youtube.com/embed/9owHaf9c0kk", 
+                "http://www.youtube.com/"];
+            $('#proExp')[0].src = sites[$(this).index()];
+          }
+          $(".select-result").text(nnn);
+      });
+    </script>
+  </body>
+</html>

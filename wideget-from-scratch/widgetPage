@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/css/bootstrap-combined.min.css">
+    <link rel="stylesheet" href="widgetPage.css">
+    <meta charset="utf-8" />
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <meta charset="UTF-8" />
+    <title>Portfolio-Main</title>
+  </head>
+  <body>
+    <div class="menu" id="proList">
+      <p id="feedback">
+        <span>Now Showing: </span> <span class="select-result">none</span>.
+      </p>
+      <div class="menu" id="proListContainer">
+        <ol id="selectable">
+          <li class="projectTab">Example 1</li>
+          <li class="projectTab">Example 2</li>
+          <li class="projectTab">Another</li>
+          <li class="projectTab">Another</li>
+          <li class="projectTab">Another</li>
+          <li class="projectTab">Another</li>
+          <li class="projectTab">Another</li>
+          <li class="projectTab">Another</li>
+          <li class="projectTab">Another</li>
+          <li class="projectTab">Another</li>
+          <li class="projectTab">Another</li>
+        </ol>
+      </div>
+    </div>
+    <iframe class="menu" id="proExp" src=""></iframe>
+    <script>
+      $(".projectTab").click(function () {
+          var nnn = $(this).text();
+          var sites = ["http://my.cs.lmu.edu/~cagudo/cmsi370/Websimile/finderPref.html", 
+              "http://my.cs.lmu.edu/~cagudo/cmsi370/Websimile/wunderlist.html"];
+          $(".select-result").text(nnn);
+          $('#proExp')[0].src = sites[$(this).index()];
+      });
+    </script>
+  </body>
+</html>
