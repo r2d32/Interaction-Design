@@ -1,8 +1,13 @@
 body{
+    background-image:url('greyBack.jpg');
     background-repeat:no-repeat;
     background-color:black;
     background-attachment: fixed;
     background-position: center;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
 }
 
 div{
