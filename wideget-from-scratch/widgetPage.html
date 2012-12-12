@@ -54,11 +54,15 @@
       $(".projectTab").click(function () {
           var currCont = $(this).parent().parent().attr("id");
           var nnn = $(this).text();
+          // JD: In JavaScript, the preferred equality comparator is ===.
           if( currCont == "proListContainer"){
             var sites = ["http://my.cs.lmu.edu/~cagudo/cmsi370/Websimile/finderPref.html", 
                 "http://my.cs.lmu.edu/~cagudo/cmsi370/Websimile/wunderlist.html","mental-model-paper.pdf","http://www.youtube.com/embed/9owHaf9c0kk"];
             $('#proExp')[0].src = sites[$(this).index()];
           } else if (currCont == "proListContainer2"){
+            // JD: This amounts to unnecessarily repeated code.  The only difference between
+            //     this block and the one above is the array of sites used.  You should be
+            //     able to combine this into a function with parameters.
             var sites = ["http://www.youtube.com/embed/9owHaf9c0kk", 
                 "http://www.youtube.com/"];
             $('#proExp')[0].src = sites[$(this).index()];
