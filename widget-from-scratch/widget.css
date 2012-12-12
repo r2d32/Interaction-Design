@@ -1,13 +1,3 @@
-body{
-    background-repeat:no-repeat;
-    background-color:black;
-    background-attachment: fixed;
-    background-position: center;
-}
-
-div{
-    display: block;
-}
 .menu{
     width: 500px;
     height: 600px;
@@ -125,4 +115,4 @@ div{
     background-color: #919191;
     -moz-box-shadow: inset 0 0 10px #000000;
     -webkit-box-shadow: inset 0 0 14px black;
-}
+}     
