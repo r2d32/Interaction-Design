@@ -1,0 +1,281 @@
+body{
+  background-image:url('greyBack1.jpg');
+  background-repeat:no-repeat;
+  background-color:black;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+div{
+  display: block;
+}
+
+
+.webContainer{
+  width: 550px;
+}
+.frame{
+margin: 0 auto;
+margin-top: 0px;
+margin-right: auto;
+margin-bottom: 0px;
+width: 520px;
+height: 100%;
+text-align: left;
+
+    padding-top: 0px;
+    padding-left: 0px;
+    margin-left: 10px;
+    padding-right: 0px;
+  overflow:hidden
+  display:inline-block;
+  height: 1200px;
+  min-height: 100%;
+  background-color: rgba(255, 255, 255, 0.14);
+}
+
+.topMenu{
+  position: fixed;
+  width: 550px;  
+  heighteight: 40px;
+  background-image: -webkit-linear-gradient(top, #646262 , #2C2C2C);
+    background-image: -moz-linear-gradient(top, #646262 , #2C2C2C); 
+    background-image:   -ms-linear-gradient(top, #646262 , #2C2C2C); 
+    background-image:      -o-linear-gradient(top, #646262 , #2C2C2C);
+  border-bottom: outset 1px black;
+  border-top: outset 1px #B1B1B1;
+}
+.topImage{
+  float: left;
+  max-width: 23%;
+  margin-top: 0px;
+}
+.topBtn{
+  height: 40px;
+  width: 90px;
+  margin-left: 0px;
+  padding-top: 0.5em;
+  display: inline-block;
+}
+.btnTxt{
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: #BDBDBD;
+  text-shadow: 0 1px black;
+}
+#home{
+  margin-left: 35px;
+}
+#twitter{
+  float: none;
+  max-width: 37px;
+    margin-left: 10px;
+}
+#youtube{
+  float: none;
+  max-width: 37px;
+    margin-left: 10px;
+}
+#mail{
+  margin-top: 2px;
+}
+#follow{
+  margin-left: 405px;
+  width: 100px;
+}
+.lMenus{
+  float: left;
+  width: 300px;
+  height: 900px;
+}
+.rMenus{
+  float: right;
+  width: 537px;
+  height: 900px;
+}
+.menu{
+  width: 280px;
+  height: 170px;
+  margin-left: 20px;
+  margin-top: 56px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.90);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -ms-transition: all 1s;
+  -moz-box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
+  -ms-box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
+  -o-box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
+  box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
+
+}
+#proList{
+  position: fixed;
+  margin-top: 241px;
+  height: 300px;
+}
+#proExp{
+  height: 1007px;
+  width: 497px;
+
+}
+#card{
+  position: fixed;
+}
+
+.leftCard{
+  width: 160px;
+  float: left;
+  height: 170px;
+}
+#profPic{
+  max-width: 81%;
+  margin: 5px;
+  float: right;
+
+}
+.insideContainer {
+  margin: 10px;
+  width: 110px;
+  height: 100px;
+  border-radius: 3px;
+}
+#name{
+  height: 22px;
+  margin-top: 40px;
+  font-size: 20px;
+  width: 140px;
+  font-weight: bold;
+  line-height: 1;
+  color: #020202;
+  text-shadow: 0 -1px 0 #FDFAFA;
+}
+#photo{
+  box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.19);
+  margin-left: 0px;
+  float: right;
+  width: 50px;
+  height: 60px;
+}
+.rightCard{
+  float: right;
+  width: 120px;
+}
+#company{
+  margin: 0px;
+  margin-left: 10px;
+  height: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  width: 180px;
+}
+
+#position{
+  margin: 0px;
+  margin-left: 10px;
+  height: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  width: 180px;
+}
+
+#bestExperience{
+  margin: 0px;
+  margin-left: 10px;
+  height: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  width: 180px;
+
+}
+#phone{
+  margin-bottom: 0px;
+  margin-left: 10px;
+  height: 5px;
+  font-size: 10px;
+  width: 180px;
+
+}
+#email{
+  margin-top: 12px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  height: 5px;
+  font-size: 10px;
+  width: 180px;
+
+}
+#feedback {
+  margin: 10px;
+  margin-bottom: 34px;
+  height: 15px;
+  font-size: 15px;
+  font-weight: 800;
+}
+#selectable .ui-selecting {
+  background: #FECA40; 
+}
+#selectable .ui-selected {
+  background: rgba(0, 0, 0, 0.32);
+  color: white; 
+}
+#selectable {
+  list-style-type: none; 
+  margin: 5px; 
+  padding: 0; 
+  width: 95%; 
+}
+#selectable li {
+  margin: 3px; 
+  padding: 0.4em; 
+  height: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  height: 18px; 
+}
+.projectTab{
+  border-radius: 4px;
+  padding-top: 0px;
+  margin-top: 3px;
+  background-image:   -webkit-linear-gradient(top, rgba(255, 255, 255, 1) , rgba(231, 231, 231, 1));
+  background-image:   -moz-linear-gradient(top, rgba(255, 255, 255, 1) , rgba(231, 231, 231, 1));
+  background-image:   -ms-linear-gradient(top, rgba(255, 255, 255, 1) , rgba(231, 231, 231, 1));
+  background-image:   -o-linear-gradient(top, rgba(255, 255, 255, 1) , rgba(231, 231, 231, 1));
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -ms-transition: all 1s;
+  -moz-box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
+  -ms-box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
+  -o-box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
+  box-shadow: 0 0 1px 1px rgba(2, 2, 2, 0.37);
+}
+.projectTab:hover{
+  color: #6BDAFD;
+  -moz-box-shadow: 0 0 1px 1px rgba(120, 203, 250, 0.71);
+  -ms-box-shadow: 0 0 1px 1px rgba(120, 203, 250, 0.71);
+  -o-box-shadow: 0 0 1px 1px rgba(120, 203, 250, 0.71);
+  box-shadow: 0 0 1px 1px rgba(120, 203, 250, 0.71);
+}
+.projectTab:active {
+  background-image:   -webkit-linear-gradient(top, white , #979797);  
+  background-image:   -moz-linear-gradient(top, white , #979797); 
+  background-image:   -ms-linear-gradient(top, white , #979797);  
+  background-image:   -o-linear-gradient(top, white , #979797); 
+}
+
+#proListContainer{
+  width: 260px;
+  height: 220px;
+  margin-top: 0px;
+  margin-left: 10px;
+  overflow: auto;
+  background-color: #919191;
+  -moz-box-shadow: inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 14px black;
+  box-shadow: inset 0 0 10px black;
+}

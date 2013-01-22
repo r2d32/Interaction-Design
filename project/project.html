@@ -14,20 +14,7 @@
       <div class="topMenu">
         <div class="topBtn"id="home">
           <img class="topImage"src="Home.png "></img>
-          <div class="btnTxt">Main</div>
-        </div>
-        <div class="topBtn">
-          <img class="topImage"src="email.png "id="mail"></img>
-          <div class="btnTxt">Email me</div>
-        </div>
-        <div class="topBtn"id="follow">
-          <div class="btnTxt">Follow me on</div>
-        </div>
-        <div class="topBtn" style="padding-top: 0px; width: 55px;">
-          <img class="topImage"src="twitter.png "id="twitter"></img>
-        </div>
-        <div class="topBtn" style="padding-top: 0px;">
-          <img class="topImage"src="youtube.png "id="youtube"></img>
+          <a class="btnTxt" href="home.html">Home</a>
         </div>
       </div>
       <div class="frame">
@@ -35,14 +22,14 @@
           <div class="menu" id="card">
             <div class="rightCard">
               <div class="insideContainer"id="photo">
-                <img src="id.png "id="profPic"></img>
+                <img src="cara.png "id="profPic"></img>
               </div>
             </div> 
             <div class="leftCard">
               <div class="insideContainer"id="name">Carlos Agudo</div>
               <div class="insideContainer"id="company">Loyola Marymount University</div>
-              <div class="insideContainer"id="position">User Interface Student</div>
-              <div class="insideContainer"id="bestExperience">Best Experience</div>
+              <div class="insideContainer"id="position">Computer Science Student</div>
+              <div class="insideContainer"id="bestExperience">User Interface Design</div>
               <div class="insideContainer"id="email">Email: carlos.jorrillo@gmail.com</div>
               <div class="insideContainer"id="phone">Phone Number: 857-334-5549</div>
             </div>
@@ -55,21 +42,20 @@
               <ol id="selectable">
                 <li class="projectTab">Finder Preferences Websimili</li>
                 <li class="projectTab">Wunderlist Websimili</li>
-                <li class="projectTab">Nothing</li>
-                <li class="projectTab">Project 4</li>
-                <li class="projectTab">Project 5</li>
-                <li class="projectTab">Project 6</li>
-                <li class="projectTab">Project 2</li>
-                <li class="projectTab">Hello</li>
-                <li class="projectTab">Project 4</li>
-                <li class="projectTab">Project 5</li>
-                <li class="projectTab">Project 6</li>
+                <li class="projectTab">Ruby Library</li>
+                <li class="projectTab">JavaScript Library</li>
+                <li class="projectTab">Clojure Library</li>
+                <li class="projectTab">Paper on Mental Models</li>
+                <li class="projectTab">Widget Design</li>
+                <li class="projectTab">Working on ...Java Library</li>
+                <li class="projectTab">Working on ...Design Sketches</li>
+                <li class="projectTab">Working on ...Mobile website version</li>
               </ol>
             </div>
           </div>
         </div>
         <div class="rMenus">
-          <iframe class="menu" id="proExp" src="">
+          <iframe class="menu" id="proExp" src="curriculum.pdf">
           </iframe>
         </div>
       </div>
@@ -78,7 +64,7 @@
       $(".projectTab").click(function () {
           var nnn = $(this).text();
           var sites = ["http://my.cs.lmu.edu/~cagudo/cmsi370/Websimile/finderPref.html", 
-              "http://my.cs.lmu.edu/~cagudo/cmsi370/Websimile/wunderlist.html"];
+              "http://my.cs.lmu.edu/~cagudo/cmsi370/Websimile/wunderlist.html","Rubylibrary.html","Jslibrary.html","Clojurelib.html", "http://my.cs.lmu.edu/~cagudo/cmsi370/widget-from-scratch/mental-model-paper.pdf","http://my.cs.lmu.edu/~cagudo/cmsi370/widget-from-scratch/Widget_Explanation.html","UD.png","UD.png","UD.png","UD.png","UD.png","UD.png"];
           $(".select-result").text(nnn);
           $('#proExp')[0].src = sites[$(this).index()];
       });

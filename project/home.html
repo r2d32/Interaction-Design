@@ -3,30 +3,48 @@
     <link rel="stylesheet" href="mainStuff.css">
     <link rel="stylesheet" href="slide.css">
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/css/bootstrap-combined.min.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script src="s3Slider.js" type="text/javascript"></script>
     <title>Portfolio-Home</title>
   </head>
   <body>
-    <div id="slider1">
-      <ul id="slider1Content">
-        <li class="slider1Image">
-          <a href=""><img src="example_images/wide/1.jpg" alt="1" /></a>
-          <span class="left"><strong>Title text 1</strong><br />Content text...</span></li>
-        <li class="slider1Image">
-          <a href=""><img src="example_images/wide/2.jpg" alt="2" /></a>
-          <span class="right"><strong>Title text 2</strong><br />Content text...Content text...Content text...Content text...Content text...Content text...Content text...Content text...Content text...Content text...Content text...</span></li>
-        <li class="slider1Image">
-          <img src="example_images/wide/3.jpg" alt="3" />
-          <span class="right"><strong>Title text 2</strong><br />Content text...</span></li>
-        <li class="slider1Image">
-          <img src="example_images/wide/4.jpg" alt="4" />
-          <span class="left"><strong>Title text 2</strong><br />Content text...</span></li>
-        <li class="slider1Image">
-          <img src="example_images/wide/5.jpg" alt="5" />
-          <span class="right"><strong>Title text 2</strong><br />Content text...</span></li>
-        <div class="clear slider1Image"></div>
-      </ul>
+    <div class="webContainer">
+      <div class="topMenu">
+        <div class="topBtn"id="home">
+          <img class="topImage"src="Home.png "></img>
+          <a class="btnTxt" href="project.html">Projects</a>
+        </div>
+      </div>
+
+      <div class="slideContainer">
+        <div id="slider1">
+          <ul id="slider1Content">
+            <li class="slider1Image">
+              <img src="homePics/pref.png" alt="1" />
+              <span class="right"><strong>Facimiles Project (1)</strong><br />The project consisten on resmebling sufficiently complex, self-contained user interface display each from a native desktop application (e.g., on Windows, OS X, Linux) and a native “other” application (e.g., on Android, iOS, PS3, Xbox 360), for a total of two (2) displays, and code up the closest possible facsimiles of them that you can manage in HTML/CSS. Further, the use of prebuilt CSS libraries, such as Twitter Bootstrap, was permitted.</span></li>
+            <li class="slider1Image">
+              <img src="homePics/widg.png" alt="2" />
+              <span class="right"><strong>User Interface Widget</strong><br />This project consisted on designing and implementing a reusable widget for use in web browsers. The point was to see how low-level event handling (e.g., mouse or keyboard activity) translates into higher-level ones (e.g., selection or change events).</span></li>
+            <li class="slider1Image">
+              <a href=""><img src="homePics/clojure.png" alt="3" /></a>
+              <span class="right"><strong>Clojure Library</strong><br />Library that contains several simple clojure methods. The exercises designed for this library were created to understand the basic functional programming, concurrency, and immutability.</span></li>            
+            <li class="slider1Image">
+              <a href=""><img src="homePics/box.png" alt="4" /></a>
+              <span class="right"><strong>Direct Manipulation Exercise</strong><br />Application that resembles the implemebtation of a direct manipulation simple application. Modify the modification of the given code from the class consisted on writing the code for the application to support resizing and deletion (by dragging a box outside of the designated drawing area). This project delaled with traditional mouse-driven rubberbanding and drag-and-dropfor creating, deleting.</span></li>
+            <li class="slider1Image">
+              <img src="homePics/wund.png" alt="5" />
+              <span class="right"><strong>Facimiles Project (2)</strong><br />The project consisten on resmebling sufficiently complex, self-contained user interface display each from a native desktop application (e.g., on Windows, OS X, Linux) and a native “other” application (e.g., on Android, iOS, PS3, Xbox 360), for a total of two (2) displays, and code up the closest possible facsimiles of them that you can manage in HTML/CSS. Further, the use of prebuilt CSS libraries, such as Twitter Bootstrap, was permitted.</span></li>
+            <li class="slider1Image">
+              <a href=""><img src="homePics/ruby.png" alt="6" /></a>
+              <span class="right"><strong>Ruby Library</strong><br />Library that contains several simple ruby methods. The exercises designed for this library were created to understadn the use of ruby as scripting language. Further, this set of methdos porvide an inside of functional and imperative programming that ruby allows.</span></li>
+            <li class="slider1Image">
+              <img src="homePics/cv.png" alt="7" />
+              <span class="right"><strong>Personal Resume</strong><br /></span></li>
+            <div class="clear slider1Image"></div>
+          </ul>
+        </div>
+      </div>
     </div>
     <script type="text/javascript">
       $(document).ready(function() {

@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/css/bootstrap-combined.min.css">
+    <link rel="stylesheet" href="phone.css">
+    <meta charset="utf-8" />
+    <script src="project.js"></script>
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <meta charset="UTF-8" />
+    <title>Portfolio-Main</title>
+  </head>
+  <body>
+    <div class="webContainer">  
+      <div class="topMenu">
+        <div class="topBtn"id="home">
+          <img class="topImage"src="Home.png "></img>
+          <div class="btnTxt">Main</div>
+        </div>
+        <div class="topBtn">
+          <img class="topImage"src="email.png "id="mail"></img>
+          <div class="btnTxt">Email me</div>
+        </div>
+      </div>
+      <div class="frame">
+        <div class="lMenus">
+          <div class="menu" id="card">
+            <div class="rightCard">
+              <div class="insideContainer"id="photo">
+                <img src="id.png "id="profPic"></img>
+              </div>
+            </div> 
+            <div class="leftCard">
+              <div class="insideContainer"id="name">Carlos Agudo</div>
+              <div class="insideContainer"id="company">Loyola Marymount University</div>
+              <div class="insideContainer"id="position">User Interface Student</div>
+              <div class="insideContainer"id="bestExperience">Best Experience</div>
+              <div class="insideContainer"id="email">Email: carlos.jorrillo@gmail.com</div>
+              <div class="insideContainer"id="phone">Phone Number: 857-334-5549</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(".projectTab").click(function () {
+          var nnn = $(this).text();
+          var sites = ["http://my.cs.lmu.edu/~cagudo/cmsi370/Websimile/finderPref.html", 
+              "http://my.cs.lmu.edu/~cagudo/cmsi370/Websimile/wunderlist.html"];
+          $(".select-result").text(nnn);
+          $('#proExp')[0].src = sites[$(this).index()];
+      });
+    </script>
+  </body>
+</html>
